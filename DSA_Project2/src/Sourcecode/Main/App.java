@@ -1,8 +1,15 @@
-package Sourcecode;
+package Sourcecode.Main;
+
 import java.awt.event.*;
 import java.awt.*;
 import java.util.ArrayList;
 import javax.swing.*;
+
+import Sourcecode.SortingAlgorithm.BaseSort;
+import Sourcecode.SortingAlgorithm.BubbleSort;
+import Sourcecode.SortingAlgorithm.InsertionSort;
+import Sourcecode.SortingAlgorithm.QuickSort;
+import Sourcecode.SortingAlgorithm.SelectionSort;
 
 public class App extends JFrame implements ActionListener {
 
@@ -23,10 +30,13 @@ public class App extends JFrame implements ActionListener {
     JButton reset;
 
     // Instantiate Algorithms
-    BubbleSort bubble = new BubbleSort();
-    SelectionSort selection = new SelectionSort(array);
-    InsertionSort insertion = new InsertionSort();
-    QuickSort quick = new QuickSort();
+     BaseSort[] bases = new BaseSort[6];
+    public void setupalgorithm() {
+    	bases[0]= new BubbleSort(array);
+    	bases[1] = new SelectionSort(array);
+    	bases[2] = new InsertionSort(array);
+    	bases[3] = new QuickSort(array);
+    }
 
     // Runtime, No. Comparisons, Array Accesses
     // Objects
@@ -39,7 +49,7 @@ public class App extends JFrame implements ActionListener {
     int noArrAccess = 0;
 
     // Bool value for reset check
-    boolean needReset = false;
+    private boolean needReset = false;
 
     public App(){
         // Instantiate stuff
@@ -119,6 +129,12 @@ public class App extends JFrame implements ActionListener {
         this.setVisible(true);
 
     }
+    public void setneedReset(boolean reset) {
+    	needReset = reset;
+    }
+    public boolean getneedReset() {
+    	return needReset;
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
         // Check status before pressing start button
@@ -126,7 +142,7 @@ public class App extends JFrame implements ActionListener {
             if (selectedAlgo.equals("Bubble")) {
                 System.out.println("A");
                 try {
-                    bubble.executeBubbleSort(array, draw, this);
+                    bases[0].excutesort(draw, this);
                     System.out.println("B");
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
@@ -135,21 +151,21 @@ public class App extends JFrame implements ActionListener {
 
             } else if (selectedAlgo == "Selection") {
                 try {
-                    selection.executeSelectionSort( draw, this);
+                    bases[1].excutesort( draw, this);
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
 
             } else if (selectedAlgo == "Insertion") {
                 try {
-                    insertion.executeInsertionSort(array, draw, this);
+                    bases[2].excutesort( draw, this);
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
 
             } else if (selectedAlgo == "Quick") {
                 try {
-                    quick.executeQuickSort(array, draw, this);
+                    bases[3].excutesort( draw, this);
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
@@ -161,7 +177,9 @@ public class App extends JFrame implements ActionListener {
                 draw.updateArray(array);
                 draw.repaint();
                 needReset = false;
-                selection.setarray(array);
+                for(int i=0; i< bases.length; i++) {
+                	bases[i].setarray(array);
+                }
 
             }
             // Combo box status

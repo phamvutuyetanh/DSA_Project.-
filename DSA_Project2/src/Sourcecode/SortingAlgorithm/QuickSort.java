@@ -1,14 +1,26 @@
-package Sourcecode;
-import javax.swing.*;
-import java.util.*;
+package Sourcecode.SortingAlgorithm;
 
-public class QuickSort {
-    public void executeQuickSort(ArrayList<Integer> nums, Draw draw, App app) throws InterruptedException {
-        quickSort(nums, draw,0, nums.size() - 1);
-        app.needReset = true;
+import java.util.ArrayList;
+import java.util.Collections;
+
+import Sourcecode.Main.App;
+import Sourcecode.Main.Draw;
+
+public class QuickSort extends BaseSort{
+    public QuickSort (ArrayList<Integer> array)          // constructor
+    {
+    super(array);
+  
     }
 
-    public int partition(ArrayList<Integer> subArray, Draw draw, int low, int high) throws InterruptedException {
+	@Override
+	public void excutesort(Draw draw, App app) throws InterruptedException {
+		quickSort(nums, draw,0, nums.size() - 1);
+        app.setneedReset(true);
+    }
+	
+	
+	public int partition(ArrayList<Integer> subArray, Draw draw, int low, int high) throws InterruptedException {
         int i = low;
         int pivot = subArray.get(high);
 
@@ -27,7 +39,7 @@ public class QuickSort {
         Collections.swap(subArray, i, high);
 
         draw.updateArray(subArray);
-        draw.paintImmediately(0,30,870,532);
+        draw.paintImmediately(0,30,2000,1000);//870,532
         Thread.sleep(50);
 
         return i;
@@ -41,5 +53,4 @@ public class QuickSort {
             quickSort(array, draw, div + 1, high);
         }
     }
-
 }

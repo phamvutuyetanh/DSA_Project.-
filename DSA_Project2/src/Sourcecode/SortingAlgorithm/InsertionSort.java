@@ -1,13 +1,20 @@
-package Sourcecode;
-import javax.swing.*;
-import java.util.*;
+package Sourcecode.SortingAlgorithm;
 
-public class InsertionSort extends JPanel {
+import java.util.ArrayList;
+import java.util.Collections;
+import Sourcecode.Main.App;
+import Sourcecode.Main.Draw;
 
-    public void executeInsertionSort(ArrayList<Integer> nums, Draw draw, App app) throws InterruptedException {
-        System.out.println(nums);
+public class InsertionSort extends BaseSort{
+    public InsertionSort (ArrayList<Integer> array)          // constructor
+    {
+    super(array);
+  
+    }
 
-        for (int static_idx = 1; static_idx < nums.size(); static_idx++) {
+	@Override
+	public void excutesort(Draw draw, App app) throws InterruptedException {
+		for (int static_idx = 1; static_idx < nums.size(); static_idx++) {
             int moving_idx = static_idx;
             int compare_idx = moving_idx - 1;
 
@@ -21,10 +28,12 @@ public class InsertionSort extends JPanel {
                 draw.removeAll();
                 draw.updateArray(nums);
                 draw.revalidate();
-                draw.paintImmediately(0,30,870,532);
+                draw.paintImmediately(0,30,2000,1000);//870,532
                 System.out.println(nums);
             }
         }
-        app.needReset = true;
-    }
+		app.setneedReset(true);
+		
+	}
+
 }
