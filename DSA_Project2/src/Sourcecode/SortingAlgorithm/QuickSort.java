@@ -1,7 +1,7 @@
 package Sourcecode.SortingAlgorithm;
 
 import java.util.ArrayList;
-import java.util.Collections;
+
 
 import Sourcecode.Main.App;
 import Sourcecode.Main.Draw;
@@ -15,42 +15,52 @@ public class QuickSort extends BaseSort{
 
 	@Override
 	public void excutesort(Draw draw, App app) throws InterruptedException {
-		quickSort(nums, draw,0, nums.size() - 1);
+		recQuickSort(0, nElems-1, draw);
         app.setneedReset(true);
     }
 	
 	
-	public int partition(ArrayList<Integer> subArray, Draw draw, int low, int high) throws InterruptedException {
-        int i = low;
-        int pivot = subArray.get(high);
+	public int partitionIt(int left, int right, long pivot, Draw draw) throws InterruptedException
+    {
+    int leftPtr = left-1;           // left    (after ++)
+    int rightPtr = right;  // right-1 (after --)
+    
+    while(true)
+       {                            // find bigger item
+       while( nums.get(++leftPtr)< pivot )
+          ;  // (nop)
+                                    // find smaller item
+       while(rightPtr > 0 && nums.get(--rightPtr) > pivot)
+          ;  // (nop)
 
-        for (int j = low; j < high; j++) {
-            if (subArray.get(j) < pivot) {
-                Collections.swap(subArray, i, j);
-
-                draw.updateArray(subArray);
-                draw.paintImmediately(0,30,2000,800);//870,532
-                Thread.sleep(50);
-
-
-                i++;
-            }
-        }
-        Collections.swap(subArray, i, high);
-
-        draw.updateArray(subArray);
-        draw.paintImmediately(0,30,2000,1000);//870,532
+       if(leftPtr >= rightPtr) {      // if pointers cross,
+          break;          }          //    partition done
+       else          {               // not crossed, so
+          swap(leftPtr, rightPtr);  //    swap elements
+          draw.updateArray(nums);
+        draw.paintImmediately(0,30,2000,800);//870,532
         Thread.sleep(50);
+       }
+       }  // end while(true)
+    swap(leftPtr, right);           // restore pivot
+    draw.updateArray(nums);
+    draw.paintImmediately(0,30,2000,1000);//870,532
+    Thread.sleep(50);
+    return leftPtr;                 // return pivot location
+    }  // end partitionIt()
 
-        return i;
-    }
-
-    public void quickSort(ArrayList<Integer> array, Draw draw, int low, int high) throws InterruptedException {
-        if (low < high) {
-            int div = partition(array, draw, low, high);
-
-            quickSort(array, draw, low,div - 1);
-            quickSort(array, draw, div + 1, high);
-        }
-    }
+    public void recQuickSort(int left, int right, Draw draw) throws InterruptedException
+    {
+		//left:low, right: hight
+    if(right-left <= 0)              // if size <= 1,
+        return;                      //    already sorted
+    else                             // size is 2 or larger
+       {
+       long pivot = nums.get(right);      // rightmost item
+                                          // partition range
+       int partition = partitionIt(left, right, pivot, draw);
+       recQuickSort(left, partition-1, draw);   // sort left side
+       recQuickSort(partition+1, right, draw);  // sort right side
+       }
+    }  // end recQuickSort()
 }

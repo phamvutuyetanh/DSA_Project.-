@@ -4,12 +4,8 @@ import java.awt.event.*;
 import java.awt.*;
 import java.util.ArrayList;
 import javax.swing.*;
+import Sourcecode.SortingAlgorithm.*;
 
-import Sourcecode.SortingAlgorithm.BaseSort;
-import Sourcecode.SortingAlgorithm.BubbleSort;
-import Sourcecode.SortingAlgorithm.InsertionSort;
-import Sourcecode.SortingAlgorithm.QuickSort;
-import Sourcecode.SortingAlgorithm.SelectionSort;
 
 public class App extends JFrame implements ActionListener {
 
@@ -30,7 +26,7 @@ public class App extends JFrame implements ActionListener {
     JButton reset;
 
     // Instantiate Algorithms
-     BaseSort[] bases = new BaseSort[6];
+     BaseSort[] bases = new BaseSort[4];
     public void setupalgorithm() {
     	bases[0]= new BubbleSort(array);
     	bases[1] = new SelectionSort(array);
