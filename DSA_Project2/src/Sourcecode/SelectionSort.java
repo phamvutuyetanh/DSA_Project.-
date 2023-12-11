@@ -46,4 +46,9 @@ public class SelectionSort extends JPanel {
     nums.set(one, temp2);
     nums.set(two, temp);
     }
+	public void setarray(ArrayList<Integer> array) {
+		nums = array;
+		nElems = array.size();                        // no items yet
+		 nCompare =0;
+   }
 }

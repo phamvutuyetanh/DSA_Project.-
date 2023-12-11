@@ -161,6 +161,7 @@ public class App extends JFrame implements ActionListener {
                 draw.updateArray(array);
                 draw.repaint();
                 needReset = false;
+                selection.setarray(array);
 
             }
             // Combo box status
