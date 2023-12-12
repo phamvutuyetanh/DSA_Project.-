@@ -153,6 +153,8 @@ public class App extends JFrame implements ActionListener {
             } else if (selectedAlgo == "Selection") {
                 try {
                     bases[1].excutesort(draw, this);
+                    int n = bases[1].getncompare();
+                    comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
@@ -160,6 +162,8 @@ public class App extends JFrame implements ActionListener {
             } else if (selectedAlgo == "Insertion") {
                 try {
                     bases[2].excutesort(draw, this);
+                    int n = bases[2].getncompare();
+                    comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
@@ -167,12 +171,16 @@ public class App extends JFrame implements ActionListener {
             } else if (selectedAlgo == "Quick") {
                 try {
                     bases[3].excutesort(draw, this);
+                    int n = bases[3].getncompare();
+                    comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
             } else if (selectedAlgo == "Merge") {
                 try {
                     bases[4].excutesort(draw, this);
+                    int n = bases[4].getncompare();
+                    comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
@@ -186,7 +194,9 @@ public class App extends JFrame implements ActionListener {
             needReset = false;
             for (int i = 0; i < bases.length; i++) {
                 bases[i].setarray(array);
+                bases[i].setncompare();
             }
+            comparisonsLabel.setText("No. comparisons: 0");
 
         }
         // Combo box status

@@ -20,9 +20,12 @@ public class SelectionSort extends BaseSort{
 	         min = out;                     // minimum
 	         
 	         for(in=out+1; in<nElems; in++) { // inner loop
-	        	 nCompare++;
-	            if(nums.get(in) < nums.get(min) )         // if min greater,  
-	            	min = in;   }            // we have a new min
+	        	 
+	            if(nums.get(in) < nums.get(min) ) {         // if min greater, 
+					nCompare++; 
+	            	min = in;
+				}   
+			}            // we have a new min
 	         swap(out, min);                // swap them
 	         Thread.sleep(100);
 	            draw.removeAll();

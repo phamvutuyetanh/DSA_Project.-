@@ -27,12 +27,15 @@ public class QuickSort extends BaseSort{
     
     while(true)
        {                            // find bigger item
-       while( nums.get(++leftPtr)< pivot )
+       while( nums.get(++leftPtr)< pivot ){
           ;  // (nop)
                                     // find smaller item
-       while(rightPtr > 0 && nums.get(--rightPtr) > pivot)
+          nCompare++;
+       }
+       while(rightPtr > 0 && nums.get(--rightPtr) > pivot) {
           ;  // (nop)
-
+          nCompare++;
+       }
        if(leftPtr >= rightPtr) {      // if pointers cross,
           break;          }          //    partition done
        else          {               // not crossed, so

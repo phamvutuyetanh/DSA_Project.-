@@ -38,9 +38,11 @@ public class MergeSort extends BaseSort {
         int k = left; // k is index of arr
         while (i < nLeft && j < nRight) { // case both leftArr and rightArr still have ele to merge
             if (leftArr.get(i) <= rightArr.get(j)) {
+                nCompare++;
                 arr.set(k, leftArr.get(i)); // set arr at k is = leftArr at i
                 i++;
             } else {
+                nCompare++;
                 arr.set(k, rightArr.get(j)); // set arr at k is = rightArr at j
                 j++;
             }

@@ -6,6 +6,8 @@ import Sourcecode.Main.App;
 import Sourcecode.Main.Draw;
 
 public class InsertionSort extends BaseSort{
+    // private int nAccess=0;
+    // private int nCompare=0;
     public InsertionSort (ArrayList<Integer> array)          // constructor
     {
     super(array);
@@ -14,15 +16,17 @@ public class InsertionSort extends BaseSort{
 
 	@Override
 	public void excutesort(Draw draw, App app) throws InterruptedException {
-		for (int static_idx = 1; static_idx < nums.size(); static_idx++) {
-            int moving_idx = static_idx;
-            int compare_idx = moving_idx - 1;
+		for (int out = 1; out < nElems; out++) {
+            int temp = out;
+            int in = temp - 1;
 
-            while (compare_idx >= 0 && nums.get(compare_idx) > nums.get(moving_idx)) {
+            while (in >= 0 && nums.get(in) > nums.get(temp)) {
                 // Swap and decrement
-                Collections.swap(nums, compare_idx, moving_idx);
-                moving_idx = moving_idx - 1;
-                compare_idx = compare_idx - 1;
+                nCompare++;
+                //nAccess += 2;
+                swap(in, temp);
+                temp = temp - 1;
+                in = in - 1;
 
                 Thread.sleep(25);
                 draw.removeAll();
@@ -35,5 +39,4 @@ public class InsertionSort extends BaseSort{
 		app.setneedReset(true);
 		
 	}
-
 }

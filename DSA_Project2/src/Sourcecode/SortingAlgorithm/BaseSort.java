@@ -12,10 +12,15 @@ public abstract class BaseSort {
 	
 	public BaseSort(ArrayList<Integer>array) {
 		nums = array;                 // create the array
-	      nElems = array.size();                        // no items yet
-	      nCompare =0;
+	    nElems = array.size();                        // no items yet
+	    nCompare =1;
 	}
-	
+	public int getncompare(){
+		return nCompare;
+	}
+	public void setncompare(){
+		 nCompare=0;
+	}
 	public void setarray(ArrayList<Integer> array) {
    	 nums = array;
    	 nElems = array.size();                        // no items yet
