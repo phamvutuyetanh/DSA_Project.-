@@ -198,7 +198,7 @@ public class App extends JFrame implements ActionListener {
             }
         }
         // Reset button status
-        if (e.getSource() == reset) {
+        if ((e.getSource() == algosDropdown) || e.getSource() == reset) {
             array = newArray.createArray();
             draw.updateArray(array);
             draw.repaint();
