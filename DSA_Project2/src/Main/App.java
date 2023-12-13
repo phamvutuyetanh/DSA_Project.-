@@ -39,11 +39,11 @@ public class App extends JFrame implements ActionListener {
     // Objects
     JLabel runtimeLabel;
     JLabel comparisonsLabel;
-    JLabel arrayAccessesLabel;
+    JLabel swapsLabel;
 
     // Global variables
     int noComparisons = 0;
-    int noArrAccess = 0;
+    int noSwaps = 0;
 
     // Bool value for reset check
     private boolean needReset = false;
@@ -70,7 +70,7 @@ public class App extends JFrame implements ActionListener {
 
         // Runtime, Number Comparisons, Number Array Accesses
         // Runtime label
-        runtimeLabel = new JLabel("Runtime: null");
+        runtimeLabel = new JLabel("Time complexity: null");
         runtimeLabel.setBounds(20, 180, 250, 50);
         runtimeLabel.setFont(new Font("Niagara Solid", Font.BOLD, 28));
         runtimeLabel.setForeground(Color.white);
@@ -84,11 +84,11 @@ public class App extends JFrame implements ActionListener {
         panelUpper.add(comparisonsLabel);
 
         // No. Array Access Label
-        arrayAccessesLabel = new JLabel("No. Array Access: " + noArrAccess);
-        arrayAccessesLabel.setBounds(20, 330, 250, 50);
-        arrayAccessesLabel.setFont(new Font("Niagara Solid", Font.BOLD, 28));
-        arrayAccessesLabel.setForeground(Color.white);
-        panelUpper.add(arrayAccessesLabel);
+        swapsLabel = new JLabel("No. Swaps: " + noSwaps);
+        swapsLabel.setBounds(20, 330, 250, 50);
+        swapsLabel.setFont(new Font("Niagara Solid", Font.BOLD, 28));
+        swapsLabel.setForeground(Color.white);
+        panelUpper.add(swapsLabel);
         // sua
         // Combo Box
         String[] algorithms = { "Select Algorithm", "Bubble Sort", "Selection Sort", "Insertion Sort", "Quick Sort",
@@ -144,6 +144,10 @@ public class App extends JFrame implements ActionListener {
                 System.out.println("A");
                 try {
                     bases[0].excutesort(draw, this);
+                    int n = bases[0].getncompare();
+                    comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
+                    int s = bases[0].getnSwaps();
+                    swapsLabel.setText("No. Swaps: " + Integer.toString(s));
                     System.out.println("B");
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
@@ -155,6 +159,8 @@ public class App extends JFrame implements ActionListener {
                     bases[1].excutesort(draw, this);
                     int n = bases[1].getncompare();
                     comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
+                    int s = bases[1].getnSwaps();
+                    swapsLabel.setText("No. Swaps: " + Integer.toString(s));
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
@@ -164,6 +170,8 @@ public class App extends JFrame implements ActionListener {
                     bases[2].excutesort(draw, this);
                     int n = bases[2].getncompare();
                     comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
+                    int s = bases[2].getnSwaps();
+                    swapsLabel.setText("No. Swaps: " + Integer.toString(s));
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
@@ -173,6 +181,8 @@ public class App extends JFrame implements ActionListener {
                     bases[3].excutesort(draw, this);
                     int n = bases[3].getncompare();
                     comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
+                    int s = bases[3].getnSwaps();
+                    swapsLabel.setText("No. Swaps: " + Integer.toString(s));
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
@@ -181,6 +191,7 @@ public class App extends JFrame implements ActionListener {
                     bases[4].excutesort(draw, this);
                     int n = bases[4].getncompare();
                     comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
+                    swapsLabel.setText("No. Swaps: 0");
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
@@ -195,8 +206,10 @@ public class App extends JFrame implements ActionListener {
             for (int i = 0; i < bases.length; i++) {
                 bases[i].setarray(array);
                 bases[i].setncompare();
+                bases[i].setnSwaps();
             }
             comparisonsLabel.setText("No. comparisons: 0");
+            swapsLabel.setText("No. Swaps: 0");
 
         }
         // Combo box status
@@ -204,22 +217,22 @@ public class App extends JFrame implements ActionListener {
             System.out.println(algosDropdown.getSelectedItem());
             if (algosDropdown.getSelectedItem() == "Bubble Sort") {
                 selectedAlgo = "Bubble";
-                runtimeLabel.setText("Runtime: O(N^2)");
+                runtimeLabel.setText("Time complexity: O(N^2)");
 
             } else if (algosDropdown.getSelectedItem() == "Selection Sort") {
                 selectedAlgo = "Selection";
-                runtimeLabel.setText("Runtime: O(N^2)");
+                runtimeLabel.setText("Time complexity: O(N^2)");
 
             } else if (algosDropdown.getSelectedItem() == "Insertion Sort") {
                 selectedAlgo = "Insertion";
-                runtimeLabel.setText("Runtime: O(N^2)");
+                runtimeLabel.setText("Time complexity: O(N^2)");
 
             } else if (algosDropdown.getSelectedItem() == "Quick Sort") {
                 selectedAlgo = "Quick";
-                runtimeLabel.setText("Runtime: Nlog(N)");
+                runtimeLabel.setText("Time complexity: Nlog(N)");
             } else if (algosDropdown.getSelectedItem() == "Merge Sort") {
                 selectedAlgo = "Merge";
-                runtimeLabel.setText("Runtime: Nlog(N)");
+                runtimeLabel.setText("Time complexity: Nlog(N)");
             }
         }
 
