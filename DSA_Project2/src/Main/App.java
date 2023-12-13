@@ -1,10 +1,10 @@
-package Sourcecode.Main;
+package Main;
 
 import java.awt.event.*;
 import java.awt.*;
 import java.util.ArrayList;
 import javax.swing.*;
-import Sourcecode.SortingAlgorithm.*;
+import SortingAlgorithm.*;
 
 public class App extends JFrame implements ActionListener {
 

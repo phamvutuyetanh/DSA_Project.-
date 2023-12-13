@@ -1,8 +1,9 @@
-package Sourcecode.SortingAlgorithm;
+package SortingAlgorithm;
 
 import java.util.ArrayList;
-import Sourcecode.Main.App;
-import Sourcecode.Main.Draw;
+
+import Main.App;
+import Main.Draw;
 
 public class SelectionSort extends BaseSort{
     
