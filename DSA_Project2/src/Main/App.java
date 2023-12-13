@@ -51,63 +51,63 @@ public class App extends JFrame implements ActionListener {
     public App() {
         // Instantiate stuff
         this.setTitle("Sorting Algorithms Visualizer");
-        this.setSize(new Dimension(1500, 1000));
+        this.setSize(new Dimension(1900, 1080));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // chua chinh
         // Title
         lblTtl = new JLabel("Sorting Algorithms Visualizer");
-        lblTtl.setBounds(400, 10, 1000, 100);
-        lblTtl.setFont(new Font("Niagara Solid", Font.BOLD, 80));
-        lblTtl.setForeground(Color.white);
+        lblTtl.setBounds(30, 10, 1500, 100);
+        lblTtl.setFont(new Font("Courier New", Font.BOLD, 60));
+        lblTtl.setForeground(new Color(163, 184, 204));
         panelUpper.add(lblTtl);
 
         // Add Name
         name = new JLabel("DSA-Project");
-        name.setBounds(650, 120, 206, 40);
-        name.setFont(new Font("Niagara Solid", Font.BOLD, 50));
-        name.setForeground(Color.white);
+        name.setBounds(30, 90, 300, 40);
+        name.setFont(new Font("Courier New", Font.PLAIN, 20));
+        name.setForeground(new Color(163, 184, 204));
         panelUpper.add(name);
 
         // Runtime, Number Comparisons, Number Array Accesses
         // Runtime label
         runtimeLabel = new JLabel("Time complexity: null");
-        runtimeLabel.setBounds(20, 180, 250, 50);
-        runtimeLabel.setFont(new Font("Niagara Solid", Font.BOLD, 28));
-        runtimeLabel.setForeground(Color.white);
+        runtimeLabel.setBounds(30, 180, 500, 50);
+        runtimeLabel.setFont(new Font("Courier New", Font.BOLD, 28));
+        runtimeLabel.setForeground(new Color(163, 184, 204));
         panelUpper.add(runtimeLabel);
 
         // No. Comparisons Label
         comparisonsLabel = new JLabel("No. Comparisons: " + noComparisons);
-        comparisonsLabel.setBounds(20, 250, 250, 50);
-        comparisonsLabel.setFont(new Font("Niagara Solid", Font.BOLD, 28));
-        comparisonsLabel.setForeground(Color.white);
+        comparisonsLabel.setBounds(30, 215, 500, 50);
+        comparisonsLabel.setFont(new Font("Courier New", Font.BOLD, 28));
+        comparisonsLabel.setForeground(new Color(163, 184, 204));
         panelUpper.add(comparisonsLabel);
 
         // No. Array Access Label
         swapsLabel = new JLabel("No. Swaps: " + noSwaps);
-        swapsLabel.setBounds(20, 330, 250, 50);
-        swapsLabel.setFont(new Font("Niagara Solid", Font.BOLD, 28));
-        swapsLabel.setForeground(Color.white);
+        swapsLabel.setBounds(30, 250, 500, 50);
+        swapsLabel.setFont(new Font("Courier New", Font.BOLD, 28));
+        swapsLabel.setForeground(new Color(163, 184, 204));
         panelUpper.add(swapsLabel);
         // sua
         // Combo Box
         String[] algorithms = { "Select Algorithm", "Bubble Sort", "Selection Sort", "Insertion Sort", "Quick Sort",
                 "Merge Sort" };
         algosDropdown = new JComboBox(algorithms);
-        algosDropdown.setBounds(1200, 180, 200, 50);
+        algosDropdown.setBounds(30, 300, 140, 35);
         algosDropdown.addActionListener(this);
         panelUpper.add(algosDropdown);
 
         // Buttons
         // Start Button
-        start = new JButton("Start Visualization");
-        start.setBounds(1200, 250, 200, 50);// 700, 30, 140,30
+        start = new JButton("Start Sort");
+        start.setBounds(190, 300, 140, 35);// 700, 30, 140,30
         start.addActionListener(this);
         panelUpper.add(start);
 
         // Reset Button
         reset = new JButton("Reset");
-        reset.setBounds(1200, 330, 200, 50);// 700, 60, 140, 30. x,y,rong,dai
+        reset.setBounds(350, 300, 140, 35);// 700, 60, 140, 30. x,y,rong,dai
         reset.addActionListener(this);
         panelUpper.add(reset);
 
@@ -116,8 +116,8 @@ public class App extends JFrame implements ActionListener {
         draw.setBounds(0, 450, 2000, 800);// 870,522
 
         // Set background colours
-        panelUpper.setBackground(Color.black);
-        draw.setBackground(Color.black);
+        panelUpper.setBackground(new Color(30, 30, 30));
+        draw.setBackground(new Color(30, 30, 30));
 
         // Add panels
         panelUpper.setLayout(new BorderLayout());
