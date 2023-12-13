@@ -6,7 +6,6 @@ import Main.App;
 import Main.Draw;
 
 public class BubbleSort extends BaseSort {
-	private boolean swapped = true;
 
 	public BubbleSort(ArrayList<Integer> array) // constructor
 	{

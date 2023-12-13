@@ -191,7 +191,8 @@ public class App extends JFrame implements ActionListener {
                     bases[4].excutesort(draw, this);
                     int n = bases[4].getncompare();
                     comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
-                    swapsLabel.setText("No. Swaps: 0");
+                    int s = bases[4].getnSwaps();
+                    swapsLabel.setText("No. Swaps: " + Integer.toString(s));
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
