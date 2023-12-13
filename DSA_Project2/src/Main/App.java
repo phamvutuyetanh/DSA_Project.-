@@ -85,7 +85,7 @@ public class App extends JFrame implements ActionListener {
 
         // No. Array Access Label
         swapsLabel = new JLabel("No. Swaps: " + noSwaps);
-        swapsLabel.setBounds(30, 250, 500, 50);
+        swapsLabel.setBounds(30, 250, 600, 50);
         swapsLabel.setFont(new Font("Courier New", Font.BOLD, 28));
         swapsLabel.setForeground(new Color(163, 184, 204));
         panelUpper.add(swapsLabel);
@@ -191,8 +191,7 @@ public class App extends JFrame implements ActionListener {
                     bases[4].excutesort(draw, this);
                     int n = bases[4].getncompare();
                     comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
-                    int s = bases[4].getnSwaps();
-                    swapsLabel.setText("No. Swaps: " + Integer.toString(s));
+                    swapsLabel.setText("No. Swaps: NO SWAP in Merge sort");
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 }
