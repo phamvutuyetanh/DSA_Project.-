@@ -19,10 +19,12 @@ public class App extends JFrame implements ActionListener {
     CreateArray newArray = new CreateArray();
     ArrayList<Integer> array = newArray.createArray();// create array list with random position
     Draw draw = new Draw(array);
+    DrawDefinition drawmes = new DrawDefinition(this);
 
     // Buttons
     JButton start;
     JButton reset;
+    JButton defi;
 
     // Instantiate Algorithms
     BaseSort[] bases = new BaseSort[5];
@@ -42,8 +44,7 @@ public class App extends JFrame implements ActionListener {
     JLabel swapsLabel;
 
     // Global variables
-    int noComparisons = 0;
-    int noSwaps = 0;
+    private int count = 1;
 
     // Bool value for reset check
     private boolean needReset = false;
@@ -77,15 +78,15 @@ public class App extends JFrame implements ActionListener {
         panelUpper.add(runtimeLabel);
 
         // No. Comparisons Label
-        comparisonsLabel = new JLabel("No. Comparisons: " + noComparisons);
+        comparisonsLabel = new JLabel("No. Comparisons: " );
         comparisonsLabel.setBounds(30, 215, 500, 50);
         comparisonsLabel.setFont(new Font("Courier New", Font.BOLD, 28));
         comparisonsLabel.setForeground(new Color(163, 184, 204));
         panelUpper.add(comparisonsLabel);
 
         // No. Array Access Label
-        swapsLabel = new JLabel("No. Swaps: " + noSwaps);
-        swapsLabel.setBounds(30, 250, 600, 50);
+        swapsLabel = new JLabel("No. Swaps: " );
+        swapsLabel.setBounds(30, 250, 500, 50);
         swapsLabel.setFont(new Font("Courier New", Font.BOLD, 28));
         swapsLabel.setForeground(new Color(163, 184, 204));
         panelUpper.add(swapsLabel);
@@ -111,16 +112,23 @@ public class App extends JFrame implements ActionListener {
         reset.addActionListener(this);
         panelUpper.add(reset);
 
+        // defi 
+        defi = new JButton("Definition of Algorithm");
+        defi.setBounds(350, 350, 140, 35);// 700, 60, 140, 30. x,y,rong,dai
+        defi.addActionListener(this);
+        panelUpper.add(defi);
+
         // Align two panels
         panelUpper.setBounds(0, 0, 2000, 500);/// 870,100
-        draw.setBounds(0, 450, 2000, 800);// 870,522
-
+        draw.setBounds(0, 500, 2000, 700);// 870,522
+        drawmes.setBounds(550, 120, 1300, 370);
         // Set background colours
         panelUpper.setBackground(new Color(30, 30, 30));
         draw.setBackground(new Color(30, 30, 30));
-
+        drawmes.setBackground(new Color(30, 30, 30));
         // Add panels
         panelUpper.setLayout(new BorderLayout());
+        this.add(drawmes);
         this.add(draw);
         this.add(panelUpper);
         this.validate();
@@ -143,6 +151,7 @@ public class App extends JFrame implements ActionListener {
             if (selectedAlgo.equals("Bubble")) {
                 System.out.println("A");
                 try {
+                    
                     bases[0].excutesort(draw, this);
                     int n = bases[0].getncompare();
                     comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
@@ -208,10 +217,31 @@ public class App extends JFrame implements ActionListener {
                 bases[i].setncompare();
                 bases[i].setnSwaps();
             }
+            drawmes.setdraw(false);
+        	drawmes.repaint();
             comparisonsLabel.setText("No. comparisons: 0");
             swapsLabel.setText("No. Swaps: 0");
 
         }
+
+        if(e.getSource() == defi & algosDropdown.getSelectedItem() != "Select Algorithm") {
+        	count++;
+        	System.out.println("C"+count);
+        	if(count%2 == 0) {
+        		drawmes.setdraw(true);
+        		String al = selectedAlgo;
+        		drawmes.setAlgo(al);
+        		drawmes.repaint();
+        	}
+        	else {
+        		drawmes.setdraw(false);
+        		drawmes.repaint();
+        	}
+        	
+        	
+        	
+        }
+
         // Combo box status
         if (e.getSource() == algosDropdown) {
             System.out.println(algosDropdown.getSelectedItem());
