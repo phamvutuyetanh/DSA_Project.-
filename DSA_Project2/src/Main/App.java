@@ -27,7 +27,7 @@ public class App extends JFrame implements ActionListener {
     JButton defi;
 
     // Instantiate Algorithms
-    BaseSort[] bases = new BaseSort[5];
+    BaseSort[] bases = new BaseSort[6];
 
     public void setupalgorithm() {
         bases[0] = new BubbleSort(array);
@@ -35,6 +35,7 @@ public class App extends JFrame implements ActionListener {
         bases[2] = new InsertionSort(array);
         bases[3] = new QuickSort(array);
         bases[4] = new MergeSort(array);
+        bases[5]= new ShellSort(array);
     }
 
     // Runtime, No. Comparisons, Array Accesses
@@ -93,7 +94,7 @@ public class App extends JFrame implements ActionListener {
         // sua
         // Combo Box
         String[] algorithms = { "Select Algorithm", "Bubble Sort", "Selection Sort", "Insertion Sort", "Quick Sort",
-                "Merge Sort" };
+                "Merge Sort","Shell Sort" };
         algosDropdown = new JComboBox(algorithms);
         algosDropdown.setBounds(30, 300, 140, 35);
         algosDropdown.addActionListener(this);
@@ -205,7 +206,18 @@ public class App extends JFrame implements ActionListener {
                     interruptedException.printStackTrace();
                 }
             }
+            else if( selectedAlgo=="Shell"){
+                try{
+                bases[5].excutesort(draw,this);
+                int n= bases[5].getncompare();
+                comparisonsLabel.setText("No. comparisons: " + Integer.toString(n));
+                swapsLabel.setText("No. Swaps: NO SWAP in Merge sort");
+            }
+            catch (InterruptedException interruptedException) {
+                    interruptedException.printStackTrace();
         }
+    }
+}
         // Reset button status
         if ((e.getSource() == algosDropdown) || e.getSource() == reset) {
             array = newArray.createArray();
@@ -263,8 +275,13 @@ public class App extends JFrame implements ActionListener {
             } else if (algosDropdown.getSelectedItem() == "Merge Sort") {
                 selectedAlgo = "Merge";
                 runtimeLabel.setText("Time complexity: Nlog(N)");
-            }
+            } else if (algosDropdown.getSelectedItem() == "Shell Sort") {
+                selectedAlgo = "Shell";
+                runtimeLabel.setText("Time complexity: Nlog(N)");
         }
 
     }
-}
+}}
+        
+    
+

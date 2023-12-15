@@ -66,8 +66,9 @@ public class DrawDefinition extends JPanel {
 		} else if (algorithm.equals("Merge")) {
 			String text = "Merge Sort is a sorting algorithms based on the divide and conquer strategy. It works by dividing an array into two halves, sorting each half, and then merging the sorted halves back together. This process is repeated until the entire array is sorted. It’s known for its efficiency, with a worst-case time complexity of Ο(N log(n) ).";
 			g2.drawString(text, x, y);
+		} else if( algorithm.equals("Shell")){
+			String text= "";
 		}
-
 	}
 
 }

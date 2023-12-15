@@ -31,6 +31,7 @@ public class BubbleSort extends BaseSort {
 					System.out.println(nums);
 
 				}
+				app.setneedReset(true);
 			}
 		}
 	}
