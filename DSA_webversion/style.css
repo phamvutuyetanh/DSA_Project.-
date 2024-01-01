@@ -1,0 +1,167 @@
+.Information {
+    font-style: italic;
+}
+h1 {color:#154568;
+    font-size: 80px;
+    text-align: center; /* Set the position to absolute */
+    height: 200px;
+    width: 2950px;
+    margin-top: 120px;
+  
+}
+#Tieude{
+
+    text-shadow: 5px 2px 2px black; 
+    color: #f9e4d2;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 50;
+    
+}
+a{
+    color: #f9e4d2;
+    font-size: 40px;
+    margin-left: 200;
+    border: 8px solid #000; /* Set a 2px solid black border around the content */
+    padding: 10px;
+    text-shadow: 7px 5px 10px black; 
+}
+#Content{
+   
+    text-shadow: 7px 5px 10px black; 
+    color: #f9e4d2;
+    font-size: 60px;
+    text-align: center;
+    padding : 50px;
+}
+h3{
+    font-style: bold;
+    font-size: 30px; }
+.second {
+    font-size: 30px}
+p{
+    color: rgb(10, 0, 122);
+    font-size: 30px; 
+    margin-left: 80px;
+}
+select{
+    width: 200px;
+    font-size: 30px; 
+    margin-left: 80px;
+    margin-top: 40px;
+}
+button{
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+.detail{
+    width : 800;
+    height : 400;
+    background-color:grey
+}
+#BigO{
+    width: 1500px;
+    height: 40px;
+    font-size: 30px;
+    margin-left: 80px;
+    margin-top: 40px;
+
+}
+
+.item {
+    border-radius: 150px;
+    border: 15px solid #154568;
+    height: 1280px;
+    margin-left: 50px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1800px 1100px;
+
+}
+#mergesort{
+    display : flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* .bar{
+    width: 10px;
+    background-color: black;
+} */
+
+.item-2 {
+    background-image: url('https://th-thumbnailer.cdn-si-edu.com/C4vS3XhQv9J7gq5bc39oAqwanOs=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/cc/c4/ccc49283-91d6-4b78-b39c-ec377ae58f50/small_mag.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+    
+}
+.item-select2 {
+    background-image: url('https://img.etimg.com/thumb/width-640,height-480,imgsize-156166,resizemode-75,msid-95617078/magazines/panache/beyond-the-milky-way-how-many-galaxies-are-there-in-the-universe/galaxy.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.item-insert2{
+    background-image: url('https://ychef.files.bbci.co.uk/1280x720/p0gkvhfw.jpg');
+}
+.item-quick2 {
+    background-image: url('https://scitechdaily.com/images/Vast-Universe-Art-Concept.jpg');
+}
+.item-merge2 {
+    
+    background-image: url('https://npr.brightspotcdn.com/dims4/default/a0d39a6/2147483647/strip/true/crop/5120x2688+0+96/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F7b%2F6d%2F33133c914d3e9671f037bd67ea34%2Fadobestock-103880786.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+#col1{
+    background-color:#cad7e8;
+}
+.Titlepage {
+    width: 2950px;
+    height: 1000px;
+    background-image: url(backgroundtitle.jpeg);
+    /* // 
+    https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDbhqFGNAA_po7Fckvht6Wwgzd_XXAUmNL3A&usqp=CAU
+    https://i.pinimg.com/originals/99/29/dd/9929ddc59f5a40e6cc6a9606b0f4e325.jpg
+    */
+    /* min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+    /* opacity: 0.35;
+    filter: blur(5px); */
+    
+    /* Set the position to absolute */
+}
+.Titlepage::before {
+    content: '';
+    background-image: inherit;
+     background-repeat: no-repeat;
+    background-size: cover; 
+    /* background-position: center; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2950px;
+    height: 1000px;
+    
+     filter: blur(5px); 
+    /* opacity: 0.5; */
+
+}
+
+#Titlename {
+    
+    text-shadow: 5px 2px 2px black; 
+    position: relative;
+    text-align: center;
+    color:  #ffccaa;
+    font-size: 180px;
+    top: 430;
+}
+
+
