@@ -1,0 +1,246 @@
+
+<html>
+ 
+<head>
+  <title> Visualization web</title>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <!-- <script src="js/math.js"></script>
+  <script src="js/column.js"></script>
+  <script src="js/Basesort.js"></script> -->
+  <!-- <script src="js/Bubblesort.js"></script>
+  <script src="js/Selectionsort.js"></script>
+  <script src="js/Insertionsort.js"></script>
+  <script src="js/Mergesort.js"></script>
+  <script src="js/QuickSort.js"></script> -->
+  <!-- <script src="js/Canvas.js"></script> -->
+  <!-- <script src="js/Shellsort.js"></script> -->
+  
+</head>
+ 
+<body>
+  
+  <div class = "Information">
+    <div class = "Titlepage">
+      <h1 id = "Titlename"> SORTING    ALGORITHM     WEBSITE</h1>
+    </div>
+   
+    <h3> Information about web </h3>
+    <ol>
+      <li> Objectives</li>
+      <li> How to use</li>
+    </ol>
+    <h3 class="second">
+      Information about Team members
+    </h3>
+    <p>
+     Description
+    </p>
+  </div>
+<h1> BUBBLE SORT ALGORITHM </h1>
+  <div class = "container-1 container">
+    <div class="item-1 item" id = "col1">
+      <!-- <p class = "bubble-button"> Method:  -->
+        <div id = "detail">
+        <button onClick="createB()" id="button1">Create chart</button>
+        <button onClick="sortB()" id="button2"> Sort </button>
+      <!-- </p> -->
+      <!-- <p class = "bubble-select"> How many items that you aim : -->
+        <select id = "select1A">   
+          <option value="10"> 10 items</option>
+          <option value="20"> 20 items</option>
+          <option value="30"> 30 items</option>
+      </select>
+    <!-- </p>
+    <p > Please chose speed  -->
+      <select id = "select1B">   
+        <option value="500"> 1x </option>
+        <option value="100"> 2x </option>
+        <option value="40"> 3x </option>
+    </select>
+        </div>
+        <div id = "BigO"> 
+          <h3 id = "Big0Bubble"> Numbers of swap: .................... Numbers of compare: ....................</h3>
+        </div>
+        
+  <!-- </p> -->
+    <canvas id = "Canvas" width="1800" height="1100"></canvas>
+  </div>
+  <div class = "item-2 item" id = "col2"> 
+    <h2 id = "Tieude">Description</h2>
+    <h2 id = "Content">
+      Bubble sort is a simple algorithm for sorting integers or other objects. The procedure examines each group of neighboring items from left to right, swapping their locations if they are out of order. The algorithm repeats this until it finds no items to swap in the entire array
+    </h2>
+    <a href="https://www.geeksforgeeks.org/bubble-sort/"> Click to get more about Bubble sort</a>
+  </div>
+  </div>
+  
+
+  <h1> SELECTION SORT ALGORITHM </h1>
+  <div class = "container-2 container">
+    <div class="item-select1 item" id = "col1">
+      <!-- <p class = "selection-button"> Method:  -->
+        <button onClick="createS()" id="buttonS">Create chart </button>
+        <button onClick="sortS()" id="buttonS"> Sort </button>
+      <!-- </p>
+      <p class = "Selection-select">How many items that you aim : -->
+        <select id = "select2A">   
+          <option value="10"> 10 items</option>
+          <option value="20"> 20 items</option>
+          <option value="30"> 30 items</option>
+      </select>
+    <!-- </p>
+    <p > Please chose speed  -->
+      <select id = "select2B">   
+        <option value="500"> 1x </option>
+        <option value="100"> 2x </option>
+        <option value="40"> 3x </option>
+    </select>
+  <!-- </p> -->
+  <div id = "BigO"> 
+    <h3 id = "Big0Select"> Numbers of swap: .................... Numbers of compare: ....................</h3>
+  </div>
+
+    <canvas id = "myCanvasSelection" width="1800" height="1100"></canvas>
+    <!-- <script src="js/scriptS.js"></script> -->
+  </div>
+  <div class = "item-select2 item" id = "col2"> 
+    <h2 id= "Tieude">Description</h2>
+  </div>
+  
+  </div>
+ 
+  <h1> INSERTION SORT ALGORITHM </h1>
+  <div class = "container-3 container">
+    <div class="item-insert1 item" id = "col1">
+      <!-- <p class = "insert-button"> Method:  -->
+        <button onClick="createI()" id="buttonI1">Create chart </button>
+        <button onClick="sortI()" id="buttonI2"> Sort </button>
+      <!-- </p>
+      <p class = "insert-select">How many items that you aim : -->
+        <select id = "select3A" >   
+          <option value="10"> 10 items</option>
+          <option value="20"> 20 items</option>
+          <option value="30"> 30 items</option>
+      </select>
+    <!-- </p>
+    <p > Please chose speed  -->
+      <select id = "select3B">   
+        <option value="500"> 1x </option>
+        <option value="100"> 2x </option>
+        <option value="40"> 3x </option>
+    </select>
+  <!-- </p> -->
+  <div id = "BigO"> 
+    <h3 id = "Big0Insert"> Numbers of swap: .................... Numbers of compare: ....................</h3>
+  </div>
+    <canvas id = "myCanvasInsertion" width="1800" height="1100"></canvas>
+    <!-- <script src="js/scriptI.js"></script> -->
+  </div>
+  <div class = "item-insert2 item" id = "col2"> 
+    <h2 id = "Tieude">Description</h2>
+  </div>
+  </div>
+
+
+
+  <h1> QUICK SORT ALGORITHM</h1>
+  <div class = "container-4 container">
+    <div class="item-quick1 item" id = "col1">
+      <!-- <p class = "quick-button"> Method:  -->
+        <button onClick="createQ()" id="buttonQ1">Create chart </button>
+        <button onClick="sortQ()" id="buttonQ2"> Sort </button>
+      <!-- </p>
+      <p class = "quick-select">How many items that you aim : -->
+        <select id = "select4A">   
+          <option value="10"> 10 items </option>
+          <option value="20"> 20 items </option>
+          <option value="30"> 30 items </option>
+      </select>
+    <!-- </p>
+    <p > Please chose speed  -->
+      <select id = "select4B">   
+        <option value="500"> 1x </option>
+        <option value="100"> 2x </option>
+        <option value="40"> 3x </option>
+    </select>
+  <!-- </p> -->
+  <div id = "BigO"> 
+    <h3 id = "Big0Quick"> Numbers of swap: ........... Numbers of comparision after each parition: ........... Total comparisions:..........</h3>
+  </div>
+    <canvas id = "myCanvasQuick" width="1800" height="1100"></canvas>
+    <!-- <script src="js/scriptQ.js"></script> -->
+  </div>
+  <div class = "item-quick2 item" id = "col2"> 
+    <h2 id = "Tieude" >Description</h2>
+  </div>
+  </div>
+
+  <h1> MERGE SORT ALGORITHM </h1>
+  <div class = "container-5 container">
+    <div class="item-merge1 item" id = "col1">
+      <!-- <p class = "merge-button"> Method:  -->
+        <button onClick="createM()" id="buttonM1">Create chart </button>
+        <button onClick="sortM()" id="buttonM2"> Sort </button>
+      <!-- </p>
+      <p class = "merge-select">How many items that you aim : -->
+        <select id = "select5A">   
+          <option value="10"> 10 items</option>
+          <option value="20"> 20 items</option>
+          <option value="30"> 30 items</option>
+      </select>
+    <!-- </p>
+    <p > Please chose speed  -->
+      <select id = "select5B">   
+        <option value="500"> 1x </option>
+        <option value="100"> 2x </option>
+        <option value="40"> 3x </option>
+    </select>
+  <!-- </p> -->
+  <div id = "BigO"> 
+    <h3 id = "Big0Merge"> Total of copies: .................... Numbers of compare in each merge sub: ....................Total comparision:..................</h3>
+  </div>
+    <canvas id = "myCanvasMerge" width="1800" height="1100"></canvas>
+    <!-- <script src="js/scriptM.js"></script> -->
+  </div>
+  <div class = "item-merge2 item" id = "col2"> 
+    <h2 id = "Tieude">Description</h2>
+  </div>
+  </div>
+
+  <h1> SHELL  SORT ALGORITHM </h1>
+  <div class = "container-6 container">
+    <div class="item-shell1 item" id = "col1">
+      <!-- <p class = "merge-button"> Method:  -->
+        <button onClick="createShell()" id="buttonM1">Create chart </button>
+        <button onClick="sortShell()" id="buttonM2"> Sort </button>
+      <!-- </p>
+      <p class = "merge-select">How many items that you aim : -->
+        <select id = "select6A">   
+          <option value="10"> 10 items</option>
+          <option value="20"> 20 items</option>
+          <option value="30"> 30 items</option>
+      </select>
+    <!-- </p>
+    <p > Please chose speed  -->
+      <select id = "select6B">   
+        <option value="500"> 1x </option>
+        <option value="100"> 2x </option>
+        <option value="40"> 3x </option>
+    </select>
+  <!-- </p> -->
+  <div id = "BigO"> 
+    <h3 id = "Big0Shell">Numbers of swap: .................... Numbers of compare: ....................</h3>
+  </div>
+    <canvas id = "myCanvasShell" width="1800" height="1100"></canvas>
+    <!-- <script src="js/scriptM.js"></script> -->
+  </div>
+  <div class = "item-shell2 item" id = "col2"> 
+    <h2 id = "Tieude">Description</h2>
+  </div>
+  </div>
+
+ 
+  <!-- <script src="js/scriptmain.js"></script> -->
+</body>
+ 
+</html> 
