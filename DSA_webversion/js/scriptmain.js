@@ -68,14 +68,14 @@ canvasB.draw();
 
 
 // Merge sort   myCanvasMerge
-// const canvasM = new Canvas('myCanvasMerge');
-// const merge = new Mergesort("#select5A","#select5B", "Big0Merge");
-// function sortM(){
-//   canvasM.sort();
-// }
-// function createM(){
-//     merge.create();
-//   }
-// canvasM.addElement(merge);
-// canvasM.draw(); 
-// merge.create();
+const canvasM = new Canvas('myCanvasMerge');
+const merge = new Mergesort("#select5A","#select5B", "Big0Merge");
+function sortM(){
+  canvasM.sort();
+}
+function createM(){
+    merge.create();
+  }
+canvasM.addElement(merge);
+canvasM.draw(); 
+merge.create();
