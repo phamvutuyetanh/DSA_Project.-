@@ -39,6 +39,32 @@ selection.create();
 // canvasQ.addElement(quick);
 // canvasQ.draw(); 
 // quick.create();
+// Shell Sort
+const canvasShell = new Canvas('myCanvasShell');
+const shell = new Shellsort("#select6A","#select6B", "Big0Shell");
+function sortShell(){
+  canvasShell.sort();
+}
+function createShell(){
+    shell.create();
+  }
+canvasShell.addElement(shell);
+canvasShell.draw(); 
+shell.create();
+// Bubble Sort
+const canvasB = new Canvas('Canvas');
+  const bubblesort = new Bubblesort("#select1A","#select1B","Big0Bubble" );
+
+  function sortB(){
+    canvasB.sort();
+  }
+  function createB(){
+    bubblesort.create();
+  }
+  canvasB.addElement(bubblesort);
+//   canvas.create();
+canvasB.draw(); 
+ bubblesort.create();
 
 
 // Merge sort   myCanvasMerge
