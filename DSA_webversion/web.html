@@ -1,6 +1,5 @@
-
+<!DOCTYPE html>
 <html>
- 
 <head>
   <title> Visualization web</title>
   <link rel="stylesheet" href="style.css" />
@@ -15,26 +14,33 @@
   <script src="js/Mergesort.js"></script>
   <!-- <script src="js/QuickSort.js"></script> -->
   <script src="js/Canvas.js"></script>
-  
+
 </head>
  
 <body>
   
   <div class = "Information">
     <div class = "Titlepage">
-      <h1 id = "Titlename"> SORTING    ALGORITHM     WEBSITE</h1>
+      <h1 id = "Titlename"> SORTING ALGORITHM WEBSITE</h1>
     </div>
    
-    <h3> Information about web </h3>
+    <h3 class="Web" > Information about web </h3>
     <ol>
-      <li> Objectives</li>
+      <li> Objectives
+        <p> To help you understand sorting algorithms/ To see how sorting algorithms actually work</p>
+      </li>
       <li> How to use</li>
+      <ul class = "Step">
+        <li>Step 1: Chose the number of items you want to sort...</li>
+        <li> Step 2: ...</li>
+        <li> Step 3: ...</li>
+      </ul>
     </ol>
     <h3 class="second">
       Information about Team members
     </h3>
     <p>
-     Description
+     Name ID 
     </p>
   </div>
 <h1> BUBBLE SORT ALGORITHM </h1>
@@ -60,7 +66,7 @@
     </select>
         </div>
         <div id = "BigO"> 
-          <h3 id = "Big0Bubble"> Numbers of swap: .................... Numbers of compare: ....................</h3>
+          <h3 id = "Big0Bubble"> Numbers of swap: .................................................................. Numbers of compare: ............................................................</h3>
         </div>
         
   <!-- </p> -->
@@ -98,7 +104,7 @@
     </select>
   <!-- </p> -->
   <div id = "BigO"> 
-    <h3 id = "Big0Select"> Numbers of swap: .................... Numbers of compare: ....................</h3>
+    <h3 id = "Big0Select"> Numbers of swap: ................................................................ Numbers of compare: ..........................................................</h3>
   </div>
 
     <canvas id = "myCanvasSelection" width="700" height="700"></canvas>
@@ -135,7 +141,7 @@
     </select>
   <!-- </p> -->
   <div id = "BigO"> 
-    <h3 id = "Big0Insert"> Numbers of swap: .................... Numbers of compare: ....................</h3>
+    <h3 id = "Big0Insert"> Numbers of swap: ................................................................. Numbers of compare: ...........................................................</h3>
   </div>
     <canvas id = "myCanvasInsertion" width="700" height="700"></canvas>
     <!-- <script src="js/scriptI.js"></script> -->
@@ -172,7 +178,7 @@
     </select>
   <!-- </p> -->
   <div id = "BigO"> 
-    <h3 id = "Big0Quick"> Numbers of swap: ........... Numbers of comparision after each parition: ........... Total comparisions:..........</h3>
+    <h3 id = "Big0Quick"> Numbers of swap: ........................................................................... Numbers of comparision after each parition: .............................. Total comparisions: .........</h3>
   </div>
     <canvas id = "myCanvasQuick" width="700" height="700"></canvas>
     <!-- <script src="js/scriptQ.js"></script> -->
@@ -208,7 +214,7 @@
     </select>
   <!-- </p> -->
   <div id = "BigO"> 
-    <h3 id = "Big0Merge"> Total of copies: .................... Numbers of compare in each merge sub: ....................Total comparision:..................</h3>
+    <h3 id = "Big0Merge"> Total of copies: ....................................................................... Numbers of compare in each merge sub: ................................. Total comparision:...................</h3>
   </div>
     <canvas id = "myCanvasMerge" width="700" height="700"></canvas>
     <!-- <script src="js/scriptM.js"></script> -->
@@ -226,8 +232,8 @@
   <div class = "container-6 container">
     <div class="item-shell1 item" id = "col1">
       <!-- <p class = "merge-button"> Method:  -->
-        <button onClick="createShell()" id="buttonM1">Create chart </button>
-        <button onClick="sortShell()" id="buttonM2"> Sort </button>
+        <button onClick="createShell()" id="buttonS1">Create chart </button>
+        <button onClick="sortShell()" id="buttonS2"> Sort </button>
       <!-- </p>
       <p class = "merge-select">How many items that you aim : -->
         <select id = "select6A">   
@@ -244,7 +250,7 @@
     </select>
   <!-- </p> -->
   <div id = "BigO"> 
-    <h3 id = "Big0Shell">Numbers of swap: .................... Numbers of compare: ....................</h3>
+    <h3 id = "Big0Shell">Numbers of swap: .................................................................. Numbers of compare: ............................................................</h3>
   </div>
     <canvas id = "myCanvasShell" width="700" height="700"></canvas>
     <!-- <script src="js/scriptM.js"></script> -->
@@ -258,8 +264,8 @@
   </div>
   </div>
 
- 
   <script src="js/scriptmain.js"></script>
+  
 </body>
  
 </html> 

@@ -115,13 +115,13 @@ class Basesort {
             var n = movee.swapnumber;
             var nCompare = movee.ncompare;
             if(movee.swapp){
-                this.swapname.textContent = "Numbers of swap:...."+n+" .... Numbers of compare:.... "+ nCompare+" .....";
+                this.swapname.textContent = "Numbers of swap: ................"+n+" ............................................... Numbers of compare:............ "+ nCompare+" .............................................";
                 this.cols[i].moveTo(this.cols[j]);
                 this.cols[j].moveTo(this.cols[i], -1);
 
                 [this.cols[i], this.cols[j]]= [this.cols[j], this.cols[i]]
             } else{
-                this.swapname.textContent = "Numbers of swap:..... "+n+" ..... Numbers of compare:.... "+ nCompare+" .....";
+                this.swapname.textContent = "Numbers of swap: ................"+n+" ............................................... Numbers of compare:............ "+ nCompare+" .............................................";
                 this.cols[i].jump();
                 this.cols[j].jump();
             }

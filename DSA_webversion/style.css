@@ -1,61 +1,90 @@
 /* .Information {
     font-style: italic;
 } */
-h1 {color:#154568;
+/*tieu de cac sort*/
+h1 {color:#ffdaba;
     font-size: 40px;
     text-align: center; /* Set the position to absolute */
-    height: 200px;
-    width: 1000px;
-    margin-top: 120px;
+    height: 50px;
+    width: 800px;
+    margin-top: 150px;
   
 }
+/* chu Description*/
 #Tieude{
 
     text-shadow: 5px 2px 2px black; 
-    color: #f9e4d2;
+    color: #ffdaba;
     font-size: 100px;
     text-align: center;
     margin-top: 50;
     
 }
+/*Information about web*/
 h3.Web{
+    color: #ffe4cd;
     font-style: italic;
-    font-size: 80px;
+    font-size: 50px;
     margin-left: 20 px;
-    border: 8px solid #000;
+    border: 5px solid #fef1e5;
     text-align: center;
 }
+/* Objectives + How to use */
 ol{
-    font-style: italic;
-    font-size: 60px;
+    color: #ffeedf;
+    font-style:inherit;
+    font-size: 40px;
     margin-left: 80px;
 }
+/*Link sort*/
 a{
-    color: #f9e4d2;
-    font-size: 30px;
+    color: #d8dfec;
+    font-size: 40.72px;
     margin-left: 100;
-    border: 8px solid #000; /* Set a 2px solid black border around the content */
+    border: 3px solid #b09b9b; /* Set a 2px solid black border around the content */
     padding: 10px;
-    text-shadow: 7px 5px 10px black; 
+
+
+    /* text-shadow: 7px 5px 10px rgb(73, 75, 94);  */
 }
+/*sort description*/
 #Content{
    
     text-shadow: 7px 5px 10px black; 
-    color: #f9e4d2;
-    font-size: 37px;
+    color: #ffdaba;
+    font-size: 35px;
     text-align: center;
-    padding : 20px;
+    padding : 15px;
 }
+/*Step1
+Step2*/
+ul{
+    color: hsl(28, 100%, 86%);
+    font-style: italic;
+    font-size: 25px;
+    margin-left: 80px;
+    
+}
+/*Numbers of swap*/
 h3{
     font-style: bold;
     font-size: 25px; }
+/*Information about Team members*/
 .second {
-    font-size: 30px}
+    color: #ffe4cd;
+    font-style: italic;
+    font-size: 50px;
+    margin-left: 20 px;
+    border: 5px solid #fef1e5;
+    text-align: center;
+}
+/*Description Information about Team members*/
 p{
-    color: rgb(10, 0, 122);
-    font-size: 30px; 
+    color: #ffeedf;
+    font-size: 28px; 
     margin-left: 80px;
 }
+/*select box*/
 select{
     width: 100px;
     height: 40px;
@@ -63,6 +92,7 @@ select{
     margin-left: 60px;
     margin-top: 40px;
 }
+/*Create chart/ sort*/
 button{
     width: 100px;
     height: 40px;
@@ -70,11 +100,13 @@ button{
     margin-left: 60px;
     margin-top: 40px;
 }
+/**/
 .detail{
     width : 800;
     height : 400;
     background-color:grey
 }
+
 #BigO{
     width: 700px;
     height: 40px;
@@ -83,13 +115,15 @@ button{
     margin-top: 40px;
 
 }
-
+/*kich thuoc cai khung*/
 .item {
-    border-radius: 150px;
-    border: 15px solid #154568;
-    height: 1000px;
-    margin-left: 15px;
+    border-radius: 130px;
+    border: 10px solid #605a3f;
+    height: 950px;
+    width: 800;
+    margin-left: 20px;
 }
+/*vi tri cai khung*/
 .container{
     display: grid;
     grid-template-columns: 800px 650px;
@@ -106,35 +140,40 @@ button{
 } */
 
 .item-2 {
-    background-image: url('https://th-thumbnailer.cdn-si-edu.com/C4vS3XhQv9J7gq5bc39oAqwanOs=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/cc/c4/ccc49283-91d6-4b78-b39c-ec377ae58f50/small_mag.jpg');
+    background-image: url('https://i.pinimg.com/originals/5b/eb/fc/5bebfca9c7bb76897de3df064a9a75c8.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
 
     
 }
 .item-select2 {
-    background-image: url('https://img.etimg.com/thumb/width-640,height-480,imgsize-156166,resizemode-75,msid-95617078/magazines/panache/beyond-the-milky-way-how-many-galaxies-are-there-in-the-universe/galaxy.jpg');
+    background-image: url('https://i.pinimg.com/originals/fb/5f/fb/fb5ffbcee0cee215265803941dae9a16.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
 }
 .item-insert2{
-    background-image: url('https://ychef.files.bbci.co.uk/1280x720/p0gkvhfw.jpg');
+    background-image: url('https://i.pinimg.com/564x/4c/f4/ef/4cf4efce3184b3c4cd7a0008244e752e.jpg');
 }
 .item-quick2 {
-    background-image: url('https://scitechdaily.com/images/Vast-Universe-Art-Concept.jpg');
+    background-image: url('https://i.pinimg.com/originals/4a/b0/0d/4ab00d8cb00a1365d31cf6d6746c364f.jpg');
 }
 .item-merge2 {
     
-    background-image: url('https://npr.brightspotcdn.com/dims4/default/a0d39a6/2147483647/strip/true/crop/5120x2688+0+96/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F7b%2F6d%2F33133c914d3e9671f037bd67ea34%2Fadobestock-103880786.jpeg');
+    background-image: url('https://i.pinimg.com/originals/38/fe/12/38fe12e7d49fc69195d09b3979ea1cab.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.item-shell2{
+    background-image: url('https://i.pinimg.com/originals/8e/87/a5/8e87a51202a7b28b98575a3bae55b5d2.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
 }
 #col1{
-    background-color:#cad7e8;
+    background-color:#d6c3a6;
 }
 .Titlepage {
-    width: 1450px;
-    height: 1000px;
+    width: 1850px;
+    height: 500px;
     background-image: url(backgroundtitle.jpeg);
     /* // 
     https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDbhqFGNAA_po7Fckvht6Wwgzd_XXAUmNL3A&usqp=CAU
@@ -159,10 +198,10 @@ button{
     position: absolute;
     top: 0;
     left: 0;
-    width: 1450px;
-    height: 1000px;
+    width: 1600px;
+    height: 500px;
     
-     filter: blur(5px); 
+     filter: blur(200px); 
     /* opacity: 0.5; */
 
 }
@@ -173,8 +212,15 @@ button{
     position: relative;
     text-align: center;
     color:  #ffccaa;
-    font-size: 100px;
+    font-size: 140px;
     top: 430;
+    
 }
 
+body {
+    background-image: url('https://i.pinimg.com/originals/85/24/89/852489cbad1b3eb5aec1c4dabd24877f.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 

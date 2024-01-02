@@ -19,13 +19,13 @@ class Mergesort extends Basesort{
             var nCompare = movee.ncompare;
             var total = movee.totalcomparison;
             if(movee.swapp){
-                this.swapname.textContent = "Total of copies:........ "+n+" ....... Numbers of compare in each merge sub :........ "+ nCompare +" ........ Total comparision: ........"+ total + "........";
+                this.swapname.textContent = "Total of copies: ................. "+n+" ................................................. Numbers of compare in each merge sub :.......... "+ nCompare +" .................... Total comparision: ........."+ total + "........";
                 this.cols[i].moveToTo(this.cols[j], -1);
                 this.cols[j].moveToTo(this.cols[i]);
 
                 [this.cols[i], this.cols[j]]= [this.cols[j], this.cols[i]]
             } else{
-                this.swapname.textContent = "Total of copies:........ "+n+" ....... Numbers of compare in each merge sub:........ "+ nCompare +" ........Total comparision: ........"+ total + "........";
+                this.swapname.textContent = "Total of copies: ................. "+n+" ................................................. Numbers of compare in each merge sub:.......... "+ nCompare +" .................... Total comparision: ........."+ total + "........";
                 // this.cols[i].jump();
                 // this.cols[j].jump();
             }
