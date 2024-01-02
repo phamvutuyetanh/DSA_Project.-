@@ -14,17 +14,17 @@ selection.create();
 
 //Insertion
 
-// const canvasI = new Canvas('myCanvasInsertion');
-// const insertion = new Insertionsort("#select3A","#select3B", "Big0Insert");
-// function sortI(){
-//   canvasI.sort();
-// }
-// function createI(){
-//     insertion.create();
-//   }
-// canvasI.addElement(insertion);
-// canvasI.draw(); 
-// insertion.create();
+const canvasI = new Canvas('myCanvasInsertion');
+const insertion = new Insertionsort("#select3A","#select3B", "Big0Insert");
+function sortI(){
+  canvasI.sort();
+}
+function createI(){
+    insertion.create();
+  }
+canvasI.addElement(insertion);
+canvasI.draw(); 
+insertion.create();
 
 
 // Quick Sort  
