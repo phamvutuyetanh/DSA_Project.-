@@ -4,13 +4,13 @@ class Basesort {
         this.magrin = 10;
         this.array = [];
         this.moves = [];
-        this.maxheight = 8;
+        this.maxheight = 5;
         this.cols = [];
         this.namebutton1 = namebutton1; // button select nElems
         this.namebutton2 = namebutton2; // button select speed
         this.swapname = document.getElementById(nameElement1);
-        this.mycanvaswidth = 1800;
-        this.mycanvasheight = 1100
+        this.mycanvaswidth = 800;
+        this.mycanvasheight = 700
         this.speed = 500;
         this.cop = [];
 
@@ -39,14 +39,14 @@ class Basesort {
         }
         this.array = this.shuffle(this.array);
         this.cop = [...this.array];
-        var spacing = (300 - this.magrin*2)/this.nElems;
+        var spacing = (180 - this.magrin*2)/this.nElems;
         this.moves=[];
         for(let i=0; i<this.array.length; i++){
-            const x = (i*spacing+spacing/2 + this.magrin*8)*4;
-            const y = this.mycanvasheight - (this.magrin*7) - i *5;
+            const x = (i*spacing+spacing/2 + this.magrin)*4;
+            const y = this.mycanvasheight - (this.magrin*2) - i *7;
             var width1 = 0;
             if(this.nElems == 10){
-                 width1 = (spacing-7)*4.5;
+                 width1 = (spacing-5)*4.5;
             }
             else if (this.nElems == 20){
                 width1 = (spacing-4)*4.5;
@@ -64,14 +64,14 @@ class Basesort {
         this.array = [...this.cop];
         var selectspeed = document.querySelector(this.namebutton2);
          this.speed = selectspeed.value;
-        var spacing = (300 - this.magrin*2)/this.nElems;
+        var spacing = (180 - this.magrin*2)/this.nElems;
         this.moves=[];
         for(let i=0; i<this.array.length; i++){
-            const x = (i*spacing+spacing/2 + this.magrin*8)*4;
-            const y = this.mycanvasheight - (this.magrin*7) - i *5;
+            const x = (i*spacing+spacing/2 + this.magrin)*4;
+            const y = this.mycanvasheight - (this.magrin*2) - i *7;
             var width1 = 0;
             if(this.nElems == 10){
-                 width1 = (spacing-7)*4.5;
+                 width1 = (spacing-5)*4.5;
             }
             else if (this.nElems == 20){
                 width1 = (spacing-4)*4.5;
@@ -81,7 +81,7 @@ class Basesort {
            }
             const width = width1;
             const height = this.maxheight*this.array[i];
-            this.cols[i] = new Column(x, y, width, height,this.speed);     
+            this.cols[i] = new Column(x, y, width, height,this.speed);    
         }   
     }
 
@@ -115,13 +115,13 @@ class Basesort {
             var n = movee.swapnumber;
             var nCompare = movee.ncompare;
             if(movee.swapp){
-                this.swapname.textContent = "Numbers of swap:........ "+n+" ....... Numbers of compare:........ "+ nCompare+" ........";
+                this.swapname.textContent = "Numbers of swap:...."+n+" .... Numbers of compare:.... "+ nCompare+" .....";
                 this.cols[i].moveTo(this.cols[j]);
                 this.cols[j].moveTo(this.cols[i], -1);
 
                 [this.cols[i], this.cols[j]]= [this.cols[j], this.cols[i]]
             } else{
-                this.swapname.textContent = "Numbers of swap:........ "+n+" ....... Numbers of compare:........ "+ nCompare+" ........";
+                this.swapname.textContent = "Numbers of swap:..... "+n+" ..... Numbers of compare:.... "+ nCompare+" .....";
                 this.cols[i].jump();
                 this.cols[j].jump();
             }
