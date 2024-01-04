@@ -7,7 +7,7 @@ h1 {color:#ffdaba;
     text-align: center; /* Set the position to absolute */
     height: 50px;
     width: 800px;
-    margin-top: 50px;
+    margin-top: 80px;
   
 }
 /* chu Description*/
@@ -100,7 +100,7 @@ button{
     margin-left: 60px;
     margin-top: 40px;
 }
-/**/
+
 .detail{
     width : 800;
     height : 400;
@@ -140,31 +140,33 @@ button{
 } */
 
 .item-2 {
-    background-image: url('https://i.pinimg.com/originals/5b/eb/fc/5bebfca9c7bb76897de3df064a9a75c8.jpg');
+    background-image: url('https://i.pinimg.com/originals/63/a1/01/63a101a9dc58431f9e645afaccc18e5b.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
-
-    
 }
 .item-select2 {
-    background-image: url('https://i.pinimg.com/originals/fb/5f/fb/fb5ffbcee0cee215265803941dae9a16.jpg');
+    background-image: url('https://i.pinimg.com/564x/0c/fe/b8/0cfeb879b4f8f9da15add409e1d13ddd.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
 }
 .item-insert2{
-    background-image: url('https://i.pinimg.com/564x/4c/f4/ef/4cf4efce3184b3c4cd7a0008244e752e.jpg');
+    background-image: url('https://i.pinimg.com/564x/21/70/3a/21703a31d8693986a5234e66dd512503.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 .item-quick2 {
-    background-image: url('https://i.pinimg.com/originals/4a/b0/0d/4ab00d8cb00a1365d31cf6d6746c364f.jpg');
+    background-image: url('https://i.pinimg.com/564x/6e/52/47/6e5247dfaa148ffdf581f0862a490eee.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 .item-merge2 {
     
-    background-image: url('https://i.pinimg.com/originals/38/fe/12/38fe12e7d49fc69195d09b3979ea1cab.jpg');
+    background-image: url('https://i.pinimg.com/564x/1a/41/4f/1a414f80b8ff2d5078dead078c96a4d5.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
 }
 .item-shell2{
-    background-image: url('https://i.pinimg.com/originals/8e/87/a5/8e87a51202a7b28b98575a3bae55b5d2.jpg');
+    background-image: url('https://i.pinimg.com/564x/20/16/98/201698ccba4abed5efc67329231d9d64.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
 }
