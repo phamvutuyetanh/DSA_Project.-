@@ -28,17 +28,18 @@ insertion.create();
 
 
 // Quick Sort  
-// const canvasQ = new Canvas('myCanvasQuick');
-// const quick = new QuickSort("#select4A", "#select4B","Big0Quick");
-// function sortQ(){
-//   canvasQ.sort();
-// }
-// function createQ(){
-//     quick.create();
-//   }
-// canvasQ.addElement(quick);
-// canvasQ.draw(); 
-// quick.create();
+const canvasQ = new Canvas('myCanvasQuick');
+const quick = new QuickSort("#select4A", "#select4B","Big0Quick");
+function sortQ(){
+  canvasQ.sort();
+}
+function createQ(){
+    quick.create();
+  }
+canvasQ.addElement(quick);
+canvasQ.draw(); 
+quick.create();
+
 // Shell Sort
 const canvasShell = new Canvas('myCanvasShell');
 const shell = new Shellsort("#select6A","#select6B", "Big0Shell");
