@@ -1,6 +1,6 @@
 class Selectionsort extends Basesort{
-    constructor(namebutton1, namebutton2, nameElement1){
-        super(namebutton1, namebutton2, nameElement1);
+    constructor(namebutton1, namebutton2, nameElement1, canvasId){
+        super(namebutton1, namebutton2, nameElement1, canvasId);
         this.swapselect = 0;
         this.compare = 0;
     }

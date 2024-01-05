@@ -1,6 +1,6 @@
 class QuickSort extends Basesort{
-    constructor(namebutton1, namebutton2, nameElement1){
-        super(namebutton1, namebutton2, nameElement1);
+    constructor(namebutton1, namebutton2, nameElement1, canvasId){
+        super(namebutton1, namebutton2, nameElement1, canvasId);
         this.swap = 0;
        
         this.totalcomparison=0;
@@ -61,11 +61,11 @@ class QuickSort extends Basesort{
         return i;
     }
 
-    animate(ctx) {
-        ctx.clearRect(0, 0, 1800, 1100);
+    animate() {
+        this.ctx.clearRect(0, 0, 1800, 1100);
         let changed = false;
         for(let i=0; i<this.cols.length; i++){
-            changed = this.cols[i].draw(ctx)||changed;
+            changed = this.cols[i].draw(this.ctx)||changed;
         }
         if(!changed && this.moves.length > 0){
             console.log("Hi");
@@ -86,6 +86,6 @@ class QuickSort extends Basesort{
                 this.cols[j].jump();
             }
         }
-        requestAnimationFrame(() => this.animate(ctx));
+        requestAnimationFrame(() => this.animate());
     }
 }

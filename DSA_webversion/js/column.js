@@ -21,7 +21,7 @@ class Column{
             this.queue.push({
 
                 x:lerp(this.x,loc.x,t),
-                y:lerp(this.y,loc.y,t)+u*this.width/4*yOffset,
+                y:lerp(this.y,loc.y,t)+u*this.width/3*yOffset,
                 r: lerp(150,255,u),
                 g: lerp(150,0,u),
                 b: lerp(150,0,u)
@@ -52,7 +52,7 @@ class Column{
             const u = Math.sin(t*Math.PI);
             this.queue.push({
                 x:lerp(this.x,this.x,t),
-                y:this.y - u * this.width/4,
+                y:this.y - u * this.width/2,
                 r: lerp(150,0,u),
                 g: lerp(150,0,u),
                 b:lerp(150,0,u)

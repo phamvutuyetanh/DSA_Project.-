@@ -1,82 +1,70 @@
 
 
- const canvasS = new Canvas('myCanvasSelection');
- const selection = new Selectionsort("#select2A","#select2B", "Big0Select");
- function sortS(){
-   canvasS.sort();
+const selection = new Selectionsort("#select2A","#select2B", "Big0Select","myCanvasSelection" );
+function sortS(){
+  selection.sort();
+}
+function createS(){
+   selection.create();
  }
- function createS(){
-    selection.create();
-  }
- canvasS.addElement(selection);
-canvasS.draw(); 
+selection.animate();
 selection.create();
 
 //Insertion
 
-const canvasI = new Canvas('myCanvasInsertion');
-const insertion = new Insertionsort("#select3A","#select3B", "Big0Insert");
+const insertion = new Insertionsort("#select3A","#select3B", "Big0Insert", "myCanvasInsertion");
 function sortI(){
-  canvasI.sort();
+  insertion.sort();
 }
 function createI(){
     insertion.create();
   }
-canvasI.addElement(insertion);
-canvasI.draw(); 
+
+insertion.animate(); 
 insertion.create();
 
 
 // Quick Sort  
-const canvasQ = new Canvas('myCanvasQuick');
-const quick = new QuickSort("#select4A", "#select4B","Big0Quick");
+const quick = new QuickSort("#select4A", "#select4B","Big0Quick", "myCanvasQuick");
 function sortQ(){
-  canvasQ.sort();
+  quick.sort();
 }
 function createQ(){
     quick.create();
   }
-canvasQ.addElement(quick);
-canvasQ.draw(); 
+quick.animate();
 quick.create();
 
 // Shell Sort
-const canvasShell = new Canvas('myCanvasShell');
-const shell = new Shellsort("#select6A","#select6B", "Big0Shell");
+const shell = new Shellsort("#select6A","#select6B", "Big0Shell", "myCanvasShell");
 function sortShell(){
-  canvasShell.sort();
+  shell.sort();
 }
 function createShell(){
     shell.create();
   }
-canvasShell.addElement(shell);
-canvasShell.draw(); 
+shell.animate();
 shell.create();
 // Bubble Sort
-const canvasB = new Canvas('Canvas');
-  const bubblesort = new Bubblesort("#select1A","#select1B","Big0Bubble" );
+  const bubblesort = new Bubblesort("#select1A","#select1B","Big0Bubble","Canvas" );
 
   function sortB(){
-    canvasB.sort();
+    bubblesort.sort();
   }
   function createB(){
     bubblesort.create();
   }
-  canvasB.addElement(bubblesort);
-//   canvas.create();
-canvasB.draw(); 
+  bubblesort.animate(); 
  bubblesort.create();
 
 
 // Merge sort   myCanvasMerge
-const canvasM = new Canvas('myCanvasMerge');
-const merge = new Mergesort("#select5A","#select5B", "Big0Merge");
+const merge = new Mergesort("#select5A","#select5B", "Big0Merge", "myCanvasMerge");
 function sortM(){
-  canvasM.sort();
+  merge.sort();
 }
 function createM(){
     merge.create();
   }
-canvasM.addElement(merge);
-canvasM.draw(); 
+merge.animate();  
 merge.create();

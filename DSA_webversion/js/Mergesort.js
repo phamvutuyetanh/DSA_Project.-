@@ -1,16 +1,16 @@
 class Mergesort extends Basesort{
-    constructor(namebutton1, namebutton2, nameElement1){
-        super(namebutton1, namebutton2, nameElement1);
+    constructor(namebutton1, namebutton2, nameElement1, canvasId){
+        super(namebutton1, namebutton2, nameElement1, canvasId);
         this.totalcompare = 0;
         this.totalcoppies = 0;
     }
 
-    animate(ctx) {
+    animate() {
         
-        ctx.clearRect(0, 0, 1800, 1100);
+        this.ctx.clearRect(0, 0, 1800, 1100);
         let changed = false;
         for(let i=0; i<this.cols.length; i++){
-            changed = this.cols[i].draw(ctx)||changed;
+            changed = this.cols[i].draw(this.ctx)||changed;
         }
         if(!changed && this.moves.length > 0){
             var movee = this.moves.shift();
@@ -30,7 +30,7 @@ class Mergesort extends Basesort{
                 // this.cols[j].jump();
             }
         }
-        requestAnimationFrame(() => this.animate(ctx));
+        requestAnimationFrame(() => this.animate());
     }
 
     sortt(array){

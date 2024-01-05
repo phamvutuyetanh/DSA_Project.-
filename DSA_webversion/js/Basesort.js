@@ -1,5 +1,5 @@
 class Basesort {
-    constructor(namebutton1, namebutton2, nameElement1){
+    constructor(namebutton1, namebutton2, nameElement1, canvasId){
         this.nElems = 10;
         this.magrin = 10;
         this.array = [];
@@ -13,8 +13,12 @@ class Basesort {
         this.mycanvasheight = 700
         this.speed = 500;
         this.cop = [];
+        this.canvas = document.getElementById(canvasId);
+        this.ctx = this.canvas.getContext('2d');
 
     }
+
+  
 
     create(){
             
@@ -103,11 +107,11 @@ class Basesort {
         return array;
       }
 
-    animate(ctx) {
-        ctx.clearRect(0, 0, 1800, 1100);
+    animate() {
+        this.ctx.clearRect(0, 0, 1800, 1100);
         let changed = false;
         for(let i=0; i<this.cols.length; i++){
-            changed = this.cols[i].draw(ctx)||changed;
+            changed = this.cols[i].draw(this.ctx)||changed;
         }
         if(!changed && this.moves.length > 0){
             var movee = this.moves.shift();
@@ -126,7 +130,7 @@ class Basesort {
                 this.cols[j].jump();
             }
         }
-        requestAnimationFrame(() => this.animate(ctx));
+        requestAnimationFrame(() => this.animate());
     }
 
     sort(){
