@@ -9,7 +9,6 @@
   <script src="js/Selectionsort.js"></script>
   <script src="js/Bubblesort.js"></script>
   <script src="js/Shellsort.js"></script>
-  
   <script src="js/Insertionsort.js"></script>
   <script src="js/Mergesort.js"></script>
   <script src="js/QuickSort.js"></script>
@@ -48,8 +47,8 @@
     <div class="item-1 item" id = "col1">
       <!-- <p class = "bubble-button"> Method:  -->
         <div id = "detail">
-        <button onClick="createB()" id="button1">Create chart</button>
-        <button onClick="sortB()" id="button2"> Sort </button>
+        <button onClick="create(this)" id="bubblesort">Create chart</button>
+        <button onClick="sort(this)" id="bubblesort"> Sort </button>
       <!-- </p> -->
       <!-- <p class = "bubble-select"> How many items that you aim : -->
         <select id = "select1A">   
@@ -86,8 +85,8 @@
   <div class = "container-2 container">
     <div class="item-select1 item" id = "col1">
       <!-- <p class = "selection-button"> Method:  -->
-        <button onClick="createS()" id="buttonS">Create chart </button>
-        <button onClick="sortS()" id="buttonS"> Sort </button>
+        <button onClick="create(this)" id="selectionsort">Create chart </button>
+        <button onClick="sort(this)" id="selectionsort"> Sort </button>
       <!-- </p>
       <p class = "Selection-select">How many items that you aim : -->
         <select id = "select2A">   
@@ -123,8 +122,8 @@
   <div class = "container-3 container">
     <div class="item-insert1 item" id = "col1">
       <!-- <p class = "insert-button"> Method:  -->
-        <button onClick="createI()" id="buttonI1">Create chart </button>
-        <button onClick="sortI()" id="buttonI2"> Sort </button>
+        <button onClick="create(this)" id="insertionsort">Create chart </button>
+        <button onClick="sort(this)" id="insertionsort"> Sort </button>
       <!-- </p>
       <p class = "insert-select">How many items that you aim : -->
         <select id = "select3A" >   
@@ -160,8 +159,8 @@
   <div class = "container-4 container">
     <div class="item-quick1 item" id = "col1">
       <!-- <p class = "quick-button"> Method:  -->
-        <button onClick="createQ()" id="buttonQ1">Create chart </button>
-        <button onClick="sortQ()" id="buttonQ2"> Sort </button>
+        <button onClick="create(this)" id="quicksort">Create chart </button>
+        <button onClick="sort(this)" id="quicksort"> Sort </button>
       <!-- </p>
       <p class = "quick-select">How many items that you aim : -->
         <select id = "select4A">   
@@ -192,48 +191,43 @@
   </div>
   </div>
 
-  <h1> MERGE SORT ALGORITHM </h1>
+  <h1> MERGE SORT ALGORITHM</h1>
   <div class = "container-5 container">
     <div class="item-merge1 item" id = "col1">
-      <!-- <p class = "merge-button"> Method:  -->
-        <button onClick="createM()" id="buttonM1">Create chart </button>
-        <button onClick="sortM()" id="buttonM2"> Sort </button>
-      <!-- </p>
-      <p class = "merge-select">How many items that you aim : -->
+        <button onClick="create(this)" id="mergesort">Create chart </button>
+        <button onClick="sort(this)" id="mergesort"> Sort </button>
         <select id = "select5A">   
           <option value="10"> 10 items</option>
           <option value="20"> 20 items</option>
           <option value="30"> 30 items</option>
-      </select>
-    <!-- </p>
-    <p > Please chose speed  -->
+        </select>
       <select id = "select5B">   
         <option value="500"> 1x </option>
         <option value="100"> 2x </option>
         <option value="40"> 3x </option>
     </select>
-  <!-- </p> -->
-  <div id = "BigO"> 
-    <h3 id = "Big0Merge"> Total of copies: ....................................................................... Numbers of comparisions in each merge sub: ................................. Total comparisions:...................</h3>
+    <div id = "BigO"> 
+      <h3 id = "Big0Merge"> Total of copies: ....................................................................... Numbers of comparisions in each merge sub: ................................. Total comparisions:...................</h3>
+    </div>
+      <canvas id = "myCanvasMerge" width="700" height="700"></canvas>
+      <!-- <script src="js/scriptM.js"></script> -->
+    </div>
+    <div class = "item-merge2 item" id = "col2"> 
+      <h2 id = "Tieude">Description</h2>
+      <h2 id = "Content">
+        Merge sort is defined as a sorting algorithm that works by dividing an array into smaller subarrays,
+         sorting each subarray, and then merging the sorted subarrays back together to form the final sorted array.
+      </h2>
   </div>
-    <canvas id = "myCanvasMerge" width="700" height="700"></canvas>
-    <!-- <script src="js/scriptM.js"></script> -->
   </div>
-  <div class = "item-merge2 item" id = "col2"> 
-    <h2 id = "Tieude">Description</h2>
-    <h2 id = "Content">
-      Merge sort is defined as a sorting algorithm that works by dividing an array into smaller subarrays,
-       sorting each subarray, and then merging the sorted subarrays back together to form the final sorted array.
-    </h2>
-  </div>
-  </div>
+
 
   <h1> SHELL  SORT ALGORITHM </h1>
   <div class = "container-6 container">
     <div class="item-shell1 item" id = "col1">
       <!-- <p class = "merge-button"> Method:  -->
-        <button onClick="createShell()" id="buttonS1">Create chart </button>
-        <button onClick="sortShell()" id="buttonS2"> Sort </button>
+        <button onClick="create(this)" id="shellsort">Create chart </button>
+        <button onClick="sort(this)" id="shellsort"> Sort </button>
       <!-- </p>
       <p class = "merge-select">How many items that you aim : -->
         <select id = "select6A">   

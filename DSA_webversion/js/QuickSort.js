@@ -22,7 +22,7 @@ class QuickSort extends Basesort{
     }
 
     partition(moves_Q,array,low, high) {
-        var comparision = 0;
+        let comparision = 0;
         let pivotIndex = Math.floor((low + high) / 2);
         let pivotValue = array[pivotIndex];
         let i = low;
@@ -68,12 +68,11 @@ class QuickSort extends Basesort{
             changed = this.cols[i].draw(this.ctx)||changed;
         }
         if(!changed && this.moves.length > 0){
-            console.log("Hi");
-            var movee = this.moves.shift();
-            var [i,j]= movee.indices;
-            var n = movee.swapnumber;
-            var nCompare = movee.ncompare;
-            var total = this.totalcomparison;
+            let movee = this.moves.shift();
+            let [i,j]= movee.indices;
+            let n = movee.swapnumber;
+            let nCompare = movee.ncompare;
+            let total = this.totalcomparison;
             if(movee.swapp){
                 this.swapname.textContent = "Numbers of swap:.... "+n+" ..... Number of comparison after each parition:.... "+ nCompare+" .... Total comparisions:...."+total+".....";
                 this.cols[i].moveToTo(this.cols[j]);

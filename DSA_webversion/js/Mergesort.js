@@ -62,10 +62,10 @@ class Mergesort extends Basesort{
  merge(moves_merge, array,workSpace, lowPtr, highPtr, upperBound){
     var array_coppy = array;
     var comparision_merge = 0;
-    var j= 0;
-    var lowerBound = lowPtr;
-    var mid = highPtr -1;
-    var n = upperBound -lowerBound+1;
+    let j= 0;
+    let lowerBound = lowPtr;
+    let mid = highPtr -1;
+    let n = upperBound -lowerBound+1;
     while(lowPtr <= mid && highPtr <= upperBound){
         // recordcompare.push(++compare)
         // recordcopy.push(++copy);

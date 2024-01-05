@@ -129,15 +129,7 @@ button{
     grid-template-columns: 800px 650px;
 
 }
-#mergesort{
-    display : flex;
-    align-items: center;
-    flex-direction: column;
-}
-/* .bar{
-    width: 10px;
-    background-color: black;
-} */
+
 
 .item-2 {
     background-image: url('https://i.pinimg.com/originals/63/a1/01/63a101a9dc58431f9e645afaccc18e5b.jpg');

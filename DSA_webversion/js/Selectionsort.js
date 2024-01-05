@@ -1,12 +1,12 @@
 class Selectionsort extends Basesort{
     constructor(namebutton1, namebutton2, nameElement1, canvasId){
         super(namebutton1, namebutton2, nameElement1, canvasId);
-        this.swapselect = 0;
-        this.compare = 0;
+        
     }
     sortt(array){
-        var moves_select = [];
-        // i = out 
+        let moves_select = [];
+        let swapselect = 0;
+        let compare = 0;
         for (let i = 0; i < array.length - 1; i++) {
             let minIndex = i;
     //j = in
@@ -16,20 +16,17 @@ class Selectionsort extends Basesort{
                     minIndex = j;
                 }
     
-                moves_select.push({ indices: [i, j], swapp: false,  swapnumber: this.swapselect, ncompare: ++ this.compare });
+                moves_select.push({ indices: [i, j], swapp: false,  swapnumber: swapselect, ncompare: ++ compare });
             }
-            //console.log(array_selection[minIndex]);
     
             if (minIndex !== i) {
                 [array[i], array[minIndex]] = [array[minIndex], array[i]];
-                moves_select.push({ indices: [i, minIndex], swapp: true,  swapnumber: ++this.swapselect, ncompare: this.compare});
+                moves_select.push({ indices: [i, minIndex], swapp: true,  swapnumber: ++swapselect, ncompare: compare});
             } 
             else {
-                moves_select.push({ indices: [i, minIndex], swapp: false,  swapnumber: this.swapselect, ncompare: this.compare });
+                moves_select.push({ indices: [i, minIndex], swapp: false,  swapnumber: swapselect, ncompare: compare });
             }
         }
-        this.swapselect = 0;
-        this.compare = 0;
         return moves_select;
 }
 }
