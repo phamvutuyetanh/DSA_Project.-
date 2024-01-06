@@ -33,7 +33,7 @@ h3.Web{
 ol{
     color: #ffeedf;
     font-style:inherit;
-    font-size: 40px;
+    font-size: 42px;
     margin-left: 80px;
 }
 /*Link sort*/
@@ -59,11 +59,17 @@ a{
 /*Step1
 Step2*/
 ul{
-    color: hsl(28, 100%, 86%);
+    color: hsl(28, 100%, 87%);
     font-style: italic;
-    font-size: 25px;
+    font-size: 27px;
     margin-left: 80px;
     
+}
+.Member{
+    color: hsl(28, 100%, 87%);
+    font-style: italic;
+    font-size: 32px;
+    margin-left: 80px;
 }
 /*Numbers of swap*/
 h3{
