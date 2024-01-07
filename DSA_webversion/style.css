@@ -22,67 +22,77 @@ h1 {color:#ffdaba;
 }
 /*Information about web*/
 h3.Web{
-    color: #ffe4cd;
+    color: #2e2b26;
     font-style: italic;
     font-size: 50px;
     margin-left: 20 px;
     border: 5px solid #fef1e5;
     text-align: center;
+    background-color: rgba(214,195,166, 1);
 }
+
+
 /* Objectives + How to use */
 ol{
-    color: #ffeedf;
+    color: #0a181f;
     font-style:inherit;
-    font-size: 42px;
+    font-size: 38px;
     margin-left: 80px;
+    background-color: rgba(214,195,166, 1);
 }
+
 /*Link sort*/
 a{
-    color: #d8dfec;
-    font-size: 40.72px;
-    margin-left: 100;
-    border: 3px solid #b09b9b; /* Set a 2px solid black border around the content */
-    padding: 10px;
+    color: #ffedba;
+    font-size: 40.75px;
 
-
+    margin-left: 300px;
+    border: 0px solid #b09b9b; /* Set a 2px solid black border around the content */
+    background-color: rgba(46,43,38, 0.5);
     /* text-shadow: 7px 5px 10px rgb(73, 75, 94);  */
 }
+
 /*sort description*/
 #Content{
-   
-    text-shadow: 7px 5px 10px black; 
-    color: #ffdaba;
+    text-shadow: 7px 5px 10px rgb(46,43,38); 
+    color: #ccebff;
     font-size: 35px;
     text-align: center;
     padding : 15px;
+    background-color: rgba(46,43,38, 0.5);
+    -webkit-text-stroke: 0.3px rgb(255, 255, 255); /* width and color of stroke */
 }
 /*Step1
 Step2*/
 ul{
-    color: hsl(28, 100%, 87%);
-    font-style: italic;
+    color: rgb(10,24,31);
+    font-style: bold;
     font-size: 27px;
     margin-left: 80px;
     
 }
 .Member{
-    color: hsl(28, 100%, 87%);
+    color: rgb(10,24,31);
     font-style: italic;
     font-size: 32px;
-    margin-left: 80px;
+    background-color: rgba(214,195,166, 1);
+
 }
 /*Numbers of swap*/
 h3{
     font-style: bold;
-    font-size: 25px; }
+    font-size: 25px; 
+}
+
 /*Information about Team members*/
 .second {
-    color: #ffe4cd;
+    color: #2e2b26;
     font-style: italic;
     font-size: 50px;
     margin-left: 20 px;
     border: 5px solid #fef1e5;
     text-align: center;
+    background-color: rgba(214,195,166,1);
 }
 /*Description Information about Team members*/
 p{
@@ -97,6 +107,8 @@ select{
     font-size: 15px; 
     margin-left: 60px;
     margin-top: 40px;
+    border-radius: 20px;
+    background-color: #ffecdc;
 }
 /*Create chart/ sort*/
 button{
@@ -105,6 +117,8 @@ button{
     font-size: 15px;
     margin-left: 60px;
     margin-top: 40px;
+    border-radius: 20px;
+    background-color: #ffecdc;
 }
 
 .detail{
@@ -132,7 +146,7 @@ button{
 /*vi tri cai khung*/
 .container{
     display: grid;
-    grid-template-columns: 800px 650px;
+    grid-template-columns: 800px 800px;
 
 }
 
