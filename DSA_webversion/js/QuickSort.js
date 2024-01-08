@@ -74,13 +74,13 @@ class QuickSort extends Basesort{
             let nCompare = movee.ncompare;
             let total = this.totalcomparison;
             if(movee.swapp){
-                this.swapname.textContent = "Numbers of swap:.... "+n+" ..... Number of comparison after each parition:.... "+ nCompare+" .... Total comparisions:...."+total+".....";
+                this.swapname.textContent = "Numbers of swap: ................ "+n+" .................................................. Number of comparison after each parition: .......... "+ nCompare+" ................. Total comparisions:...."+total+".........";
                 this.cols[i].moveToTo(this.cols[j]);
                 this.cols[j].moveToTo(this.cols[i], -1);
 
                 [this.cols[i], this.cols[j]]= [this.cols[j], this.cols[i]]
             } else{
-                this.swapname.textContent = "Numbers of swap:.... "+n+" ..... Numbers of comparíion after each parition:...."+ nCompare+" .... Total comparisions:...."+total+".....";
+                this.swapname.textContent = "Numbers of swap: ................ "+n+" .................................................. Number of comparison after each parition: .......... "+ nCompare+" ................. Total comparisions:...."+total+".........";
                 this.cols[i].jump();
                 this.cols[j].jump();
             }
