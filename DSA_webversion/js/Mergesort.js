@@ -60,15 +60,13 @@ class Mergesort extends Basesort{
 }
 
  merge(moves_merge, array,workSpace, lowPtr, highPtr, upperBound){
-    var array_coppy = array;
-    var comparision_merge = 0;
+    var array_coppy = array;            //creat an copy of the array
+    var comparision_merge = 0;          //initialize the total comparison
     let j= 0;
-    let lowerBound = lowPtr;
-    let mid = highPtr -1;
+    let lowerBound = lowPtr;            //low pointer is placed at lowerBound
+    let mid = highPtr -1;               //middle point is placed at the positon of high pointer - 1
     let n = upperBound -lowerBound+1;
     while(lowPtr <= mid && highPtr <= upperBound){
-        // recordcompare.push(++compare)
-        // recordcopy.push(++copy);
         comparision_merge++;
         this.totalcoppies++;
         if( array[lowPtr] < array[highPtr] ){
@@ -80,12 +78,9 @@ class Mergesort extends Basesort{
          }
     }
     while(lowPtr <= mid){
-        // recordcopy.push(++copy);
         this.totalcoppies++;
         workSpace[j++] = array[lowPtr++];
     }
-         
-
       while(highPtr <= upperBound){
         this.totalcoppies++;
         // recordcopy.push(++copy);
